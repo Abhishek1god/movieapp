@@ -19,7 +19,8 @@ const router = createBrowserRouter(
         <Route path="/movie/:id" element={<WatchMovie />} />
       </Route>
     </Route>
-  )
+  ),
+  { basename: "/movieapp" }
 );
 
 function App() {

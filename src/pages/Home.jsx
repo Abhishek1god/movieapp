@@ -10,7 +10,7 @@ function Home() {
   const [movie, setMovie] = useState([]);
   const [page, setPage] = useState(0);
   const [loading, setLoading] = useState(false);
-
+  const [totalPage, setTotalPage] = useState(0);
   function paginationHandler(e) {
     let action = e.currentTarget.dataset.page;
 
@@ -29,6 +29,7 @@ function Home() {
         setMovie={setMovie}
         page={page}
         setPage={setPage}
+        setTotalPage={setTotalPage}
         setLoading={setLoading}
       />
       <section className="bottom-section">
@@ -39,7 +40,7 @@ function Home() {
             <div className="container">
               {movie ? (
                 movie.map(function (mv) {
-                  return <MovieCard key={mv.imdbID} movie={mv} />;
+                  return <MovieCard key={mv.id} movie={mv} />;
                 })
               ) : (
                 <div className="error">Not Found</div>
@@ -47,10 +48,18 @@ function Home() {
             </div>
           )}
           {loading && (
-            <Pagination pageNum={page} handlePagination={paginationHandler} />
+            <Pagination
+              pageNum={page}
+              totalPage={totalPage}
+              handlePagination={paginationHandler}
+            />
           )}
           {movie && movie.length > 0 && (
-            <Pagination pageNum={page} handlePagination={paginationHandler} />
+            <Pagination
+              pageNum={page}
+              totalPage={totalPage}
+              handlePagination={paginationHandler}
+            />
           )}
         </div>
       </section>

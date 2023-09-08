@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
-import { API_URL } from "../utils/ApiURL";
+import { API_KEY } from "../utils/ApiURL";
+import { BASE_URL } from "../utils/ApiURL";
 import searchIcon from "../assets/image/glass-icon.png";
 
-export default function SearchBar({ setMovie, page, setPage, setLoading }) {
+export default function SearchBar({
+  setMovie,
+  page,
+  setPage,
+  setLoading,
+  setTotalPage,
+}) {
   const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
@@ -15,10 +22,13 @@ export default function SearchBar({ setMovie, page, setPage, setLoading }) {
     setMovie([]);
     setLoading(true);
 
-    const response = await fetch(`${API_URL}&s=${title}&page=${page}`);
+    let url = `${BASE_URL}/3/search/movie?query=${title}&page=${page}&api_key=${API_KEY}`;
+
+    const response = await fetch(url);
     const data = await response.json();
 
-    setMovie(data.Search);
+    setMovie(data.results);
+    setTotalPage(data.total_pages);
     setLoading(false);
   };
 
