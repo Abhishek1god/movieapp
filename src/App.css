@@ -5,9 +5,12 @@
   padding: 0;
   --root-color: #f72d3a;
   --root-color: black;
+
+  --sidebar-width: 190px;
+  --nav-head-height: 65px;
+
   box-sizing: border-box;
 }
 body {
-  /* background-color: #222b31; */
   background-color: #141414;
 }

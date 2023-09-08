@@ -41,6 +41,7 @@
   content: "";
   position: absolute;
   top: 0;
+  left: -2px;
   background-image: linear-gradient(
     90deg,
     var(--root-color),
@@ -72,4 +73,39 @@
 
 .movie-more_info p {
   font-size: 13px;
+}
+@media (max-width: 880px) {
+  .movie-more_info {
+    padding-left: 10px;
+    width: 420px;
+    gap: 16px;
+  }
+}
+@media (max-width: 550px) {
+  .movie-more_info {
+    padding-left: 10px;
+    width: 380px;
+    gap: 16px;
+  }
+  .movie-more_info h2 {
+    font-size: 26px;
+  }
+  .movie-more_info span {
+    /* font-size: 18px; */
+  }
+}
+@media (max-width: 400px) {
+  .watch-movie_container {
+    grid-template-columns: none;
+  }
+  .watch-movie_container::before {
+    width: 10px;
+  }
+  .backgrund-image_container {
+    width: 100%;
+  }
+  .movie-more_info {
+    width: 100%;
+    padding: 0px 10px;
+  }
 }
