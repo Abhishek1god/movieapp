@@ -1,0 +1,161 @@
+* {
+}
+.search-bar {
+  text-align: center;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+
+  box-shadow: 0px 0px 8px 0px #454545;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+
+  /* background-color: var(--root-color); */
+  background-color: #212121;
+
+  /* border: 1px solid var(--root-color); */
+  padding: 10px;
+  font-weight: 500;
+  width: 100%;
+  min-height: 65px;
+  max-height: 65px;
+}
+.search-input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  min-width: 240px;
+  color: #fff;
+  padding: 10px;
+  font-weight: 500;
+}
+.search-input::placeholder {
+  color: #f1f1f1;
+  opacity: 0.9;
+}
+.eye-glass img {
+  filter: invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+/* bottom section  */
+
+.bottom-section {
+  display: flex;
+}
+
+.bottom-section_right {
+  width: 100%;
+}
+.error {
+  font-size: 30px;
+
+  font-weight: bold;
+  /* color: #888080; */
+  color: white;
+}
+.loading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10vh;
+  color: white;
+  margin-bottom: 60vh;
+  width: 100%;
+}
+.container {
+  display: flex;
+  margin: 60px auto;
+
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  gap: 15px;
+}
+.card {
+  border-radius: 6px;
+
+  padding: 8px 4px 8px 4px;
+  width: 190px;
+  min-height: 295px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.movie-img {
+  height: 220px;
+  width: 190px;
+  border-radius: 2px;
+  max-width: 100%;
+  box-shadow: 0px 0px 4px 0px #020202;
+
+  min-height: 310px;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.movie-img:hover {
+  transform: scale(1.05);
+}
+.card h3 {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px 0px 0px 0px;
+}
+.card p {
+  display: flex;
+  height: 100%;
+  color: #7290a3;
+  margin: 0;
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: 600;
+  align-items: end;
+  text-align: left;
+  margin-bottom: 4px;
+
+  margin-top: 6px;
+}
+
+/* Pagination button  */
+.pagination-section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 12px;
+}
+.arrow {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+.arrow p {
+  display: inline-block;
+  line-height: 28px;
+}
+.arrow img {
+  height: 28px;
+  filter: invert(1);
+  cursor: pointer;
+}
+.page-num {
+  font-size: 14px;
+  line-height: 28px;
+  color: white;
+  font-weight: bold;
+}
