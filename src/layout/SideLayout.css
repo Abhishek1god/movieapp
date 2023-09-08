@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-
+  z-index: 9999;
   border-right: 1px solid #ffffff61;
 }
 
@@ -52,6 +52,7 @@
 @media (max-width: 550px) {
   * {
     --sidebar-width: 100px;
+    --nav-head-height: 45px;
   }
   .side-nav h1 {
     padding: 2px;
@@ -65,5 +66,15 @@
   }
   .content-container {
     padding-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  * {
+    --sidebar-width: 80px;
+    --nav-head-height: 45px;
+  }
+  .side-nav h1 {
+    padding: 2px;
+    font-size: 12px;
   }
 }

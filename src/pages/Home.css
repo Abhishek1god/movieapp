@@ -169,4 +169,19 @@
 }
 
 @media (max-width: 550px) {
+  .search-input {
+    min-width: initial;
+  }
+}
+@media (max-width: 400px) {
+  .search {
+    padding: 6px;
+  }
+  .search-input {
+    font-size: 13px;
+  }
+  .eye-glass img {
+    height: 14px;
+    width: 14px;
+  }
 }
